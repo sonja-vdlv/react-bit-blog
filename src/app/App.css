@@ -1,0 +1,23 @@
+* {
+  box-size: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: turquoise;
+  color: white;
+}
+
+header h1 {
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer {
+  background-color: turquoise;
+  color: white;
+}

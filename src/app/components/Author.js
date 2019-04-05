@@ -1,9 +1,10 @@
 import React from 'react';
+import AuthorList from './AuthorList'
 
 const Author = () => {
     return (
-        <h2>Authors</h2>
-    )
+        <AuthorList />
+    );
 }
 
 export default Author;

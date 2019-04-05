@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fetchPosts from '../services/fetchPosts'
+// import PostInfo from './PostInfo'
 
 class PostList extends Component {
     constructor(props) {
@@ -17,16 +18,31 @@ class PostList extends Component {
         fetchPosts()
             .then((posts) => {
                 console.log(posts);
-                // SET STATE 
+                this.setState({
+                    posts: posts
+                })
             })
     }
 
     render() {
+
+        // const postsJSX = this.state.posts
         return (
-            <h2> This is post list page</h2 >
-        )
+            <>
+                <div>
+                    <h1 className="hometitle">POSTS</h1>
+                    {this.state.posts.map((post) => (
+                        <div key={post.id} className="posts">
+                            <h2>{post.title}</h2>
+                            <p>{post.body}</p>
+                        </div>
+                    ))}
+                </div>
+            </>
+
+        );
+
+
     }
-
 }
-
 export default PostList;

@@ -21,3 +21,33 @@ footer {
   background-color: turquoise;
   color: white;
 }
+
+.posts {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.hometitle {
+  text-align: center;
+}
+
+.about {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.about h2 {
+  text-transform: uppercase;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 2%;
+}

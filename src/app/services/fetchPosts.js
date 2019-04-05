@@ -1,12 +1,12 @@
 import PostList from '../../app/components/PostList';
 
 const fetchPosts = () => {
-    return fetch('https://jsonplaceholder.typicode.com/comments')
-        .then((posts) => {
-            return posts.json()
+    return fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((response) => {
+            return response.json()
         })
         .then((data) => {
-            const posts = data.slice(0, 15)
+            const posts = data.slice(0, 10)
             return posts
         })
 

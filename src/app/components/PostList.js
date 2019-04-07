@@ -34,7 +34,7 @@ class PostList extends Component {
                     {this.state.posts.map((post) => (
                         <div key={post.id} className="posts">
                             <h2>{post.title}</h2>
-                            <p>{post.body}</p>
+                            <p>{post.body.slice(0,80)}...</p>
                         </div>
                     ))}
                 </div>

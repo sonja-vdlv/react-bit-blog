@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fetchPosts from '../../services/fetchPosts';
+import fetchSinglePost from './fetchSinglePost';
 
 class PostDetails extends Component {
     constructor(props) {
@@ -14,14 +15,11 @@ class PostDetails extends Component {
     }
 
     componentDidMount() {
-        this.loadPost()// this.postId
+        this.loadPost() // this.postId
     }
 
     loadPost() {
-        return fetch("https://jsonplaceholder.typicode.com/posts/2")
-            .then((response) => {
-                return response.json()
-            })
+        fetchSinglePost()
             .then((post) => {
                 this.setState({
                     post: post
@@ -37,7 +35,13 @@ class PostDetails extends Component {
 
 
     render() {
-        return <h2>{this.state.post.id}</h2>;
+        return(
+        <>
+        <h2>{this.state.post.title}</h2>
+        <p>{this.state.post.body}</p>
+        </>
+        );
+        
     }
 }
 

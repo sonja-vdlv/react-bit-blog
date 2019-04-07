@@ -6,7 +6,7 @@ const fetchPosts = () => {
             return response.json()
         })
         .then((data) => {
-            const posts = data.slice(5, 25)
+            const posts = data.slice(0, 25)
             return posts
         })
 
